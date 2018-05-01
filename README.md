@@ -28,3 +28,15 @@ python voc_dataset_build.py --voc_folder VOC2007 --img_folder new_img --label_fo
 ```
 
 The generated folder VOC2007 will be in VOC format.
+
+## Test image rescalling
+
+If you happen to have images (in folder `old_img`) with higher magnification (e.g. 2x large) and want to test them, use the command below:
+
+```bash
+python image_rescale.py --input old_img --output new_img --scale 0.5
+```
+
+The images inside `new_img` should be in correct scale as the network and you can pass them into the network.
+
+**Note: our network will perform worse on rescaled images.**
